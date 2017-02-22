@@ -4,14 +4,14 @@
   <div>
       <label>id: </label>{{hero.id}}
   </div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name">
+  <div class="input-group input-group-large">
+    <span class="input-group-addon" id="sizing-addon1">Hero Name: </span>
+    <input type="text" class="form-control" [(ngModel)]="hero.name" placeholder="Name" aria-describedby="sizing-addon1">
   </div>
   <h2>My Heroes</h2>
-  <ul class="heroes list-group">
-    <li class="list-group-item" *ngFor="let hero of heroes">
+  <div class="heroes list-group">
+    <button type="button" class="list-group-item" *ngFor="let hero of heroes">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </li>
-  </ul>
+    </button>
+  </div>
 </div>
